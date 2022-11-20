@@ -1,0 +1,183 @@
+:root {
+  /** primary **/
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /** Neutral **/
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  /** hover **/
+  --Bright-blue-hover: hsl(245, 70%, 62%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-color: var(--Pale-blue);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 22px;
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+
+.card {
+  background-color: white;
+  max-width: 325px;
+  height: 570px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.card-content-description {
+  color: var(--Desaturated-blue);
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+p.card-content-description {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.card-annual-plan-container {
+  background-color: var(--Very-pale-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.card-annual-plan-container a {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.card-annual-plan-price-section {
+  line-height: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-annual-plan-price {
+  padding: 0 15px;
+  font-weight: 500;
+}
+
+.card-annual-plan-price h4 {
+  color: var(--Dark-blue);
+  font-weight: 900;
+  font-size: 14px;
+}
+.card-annual-plan-price p {
+  color: var(--Desaturated-blue);
+  font-size: 13px;
+}
+
+a.button-primary,
+a.button-secondary {
+  text-decoration: none;
+}
+
+.button-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.button-primary:hover {
+  background-color: var(--Bright-blue-hover);
+}
+
+.card-annual-plan-container a:hover {
+  text-decoration: none;
+  color: var(--Bright-blue-hover);
+}
+
+.proceed-button {
+  margin-top: 10px;
+}
+
+.button-secondary {
+  padding: 15px;
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+}
+
+.button-secondary:hover {
+  color: var(--Dark-blue);
+}
+
+.cancel-button {
+  margin-top: 10px;
+}
+
+/** Desktop **/
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+  .card {
+    height: 700px;
+    max-width: 450px;
+  }
+
+  .card-content {
+    padding: 25px 50px;
+  }
+  .card-annual-plan-price h4,
+  .card-annual-plan-price p {
+    font-size: 16px;
+  }
+
+  .card-annual-plan-container {
+    padding: 15px 25px;
+  }
+
+  .proceed-button {
+    margin-top: 20px;
+  }
+}
